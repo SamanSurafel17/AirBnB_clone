@@ -17,11 +17,10 @@
 # Examples
   create an instance of datetime with the current date and time:
 
-  $ from datetime import timedelta
+from datetime import datetime
 
-    date_tomorrow = date_now + timedelta(days=1)
-    print(date_tomorrow) #2017-06-09 20:42:42.170922
+date_now = datetime.now()
+print(type(date_now)) # <class 'datetime.datetime'>
+print(date_now) # 2017-06-08 20:42:42.170922
 
 ,,,
-
-
