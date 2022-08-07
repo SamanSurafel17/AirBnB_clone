@@ -35,10 +35,3 @@ class BaseModel:
         self.updated_at = datetime.utcnow()
         models.storage.save()
 
-    def to_dict(self):
-        """Creates a dictionary of BaseModel"""
-        my_dict = self.__dict__.copy()
-        my_dict["__class__"] = self.__class__.__name__
-        my_dict["created_at"] = datetime.isoformat(self.created_at)
-        my_dict["updated_at"] = datetime.isoformat(self.updated_at)
-        return my_dict
